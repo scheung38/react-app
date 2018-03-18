@@ -3,6 +3,11 @@ node {
     stage('Checkout') {
       checkout scm
     }
+
+    stage('Test') {
+          sh 'echo Hello World'
+        }
+
     stage('Environment') {
       sh 'git --version'
       echo "Branch: ${env.BRANCH_NAME}"
